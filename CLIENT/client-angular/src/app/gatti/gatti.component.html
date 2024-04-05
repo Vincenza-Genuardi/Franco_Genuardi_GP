@@ -1,0 +1,22 @@
+<h1>I nostri gatti:</h1>
+<div class="card-group">
+  <div *ngFor="let g of gatti" class="card">
+    <img src="{{ g.immagine }}" class="card-img-top" alt="{{ g.nome }}">
+    <div class="card-body">
+      <h5>NOME DELLA RAZZA:</h5>
+      <p>{{ g.nome }}</p>
+      <h5>DESCRIZIONE:</h5>
+      <p>{{ g.descrizione }}</p>
+      <h5>ANNI DI VITA MEDI:</h5>
+      <p>{{ g.anni_vita }}</p>
+      <h5>AMICHELVOLE CON I BAMBINI?</h5>
+      <p>{{ g.amichevole_con_bambini }}</p>
+      <h5>DIMENSIONI MEDIE DA ADULTO:</h5>
+      <p>{{ g.dimensioni_medie }}</p>
+      <h5>COSTO DI MANTENIMENTO MENSILE:</h5>
+      <p>{{ g.costo_mantenimento_mensile }}</p>
+      <h5>PREZZO DI VENDITA:</h5>
+      <p>{{ g.costo_acquisto }}</p>
+    </div>
+  </div>
+</div>

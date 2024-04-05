@@ -1,0 +1,22 @@
+<h1>I nostri cani:</h1>
+<div class="card-group">
+  <div *ngFor="let c of cani" class="card">
+    <img src="{{ c.immagine }}" class="card-img-top" alt="{{ c.nome }}">
+    <div class="card-body">
+      <h5>NOME DELLA RAZZA:</h5>
+      <p>{{ c.nome }}</p>
+      <h5>DESCRIZIONE:</h5>
+      <p>{{ c.descrizione }}</p>
+      <h5>ANNI DI VITA MEDI:</h5>
+      <p>{{ c.anni_vita }}</p>
+      <h5>AMICHELVOLE CON I BAMBINI?</h5>
+      <p>{{ c.amichevole_con_bambini }}</p>
+      <h5>DIMENSIONI MEDIE DA ADULTO:</h5>
+      <p>{{ c.dimensioni_medie }}</p>
+      <h5>COSTO DI MANTENIMENTO MENSILE:</h5>
+      <p>{{ c.costo_mantenimento_mensile }}</p>
+      <h5>PREZZO DI VENDITA:</h5>
+      <p>{{ c.costo_acquisto }}</p>
+    </div>
+  </div>
+</div>
