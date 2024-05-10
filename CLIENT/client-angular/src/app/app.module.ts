@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CaneComponent } from './cani/cani.component';
 import { GattiComponent } from './gatti/gatti.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
