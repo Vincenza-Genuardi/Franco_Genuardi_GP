@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header">
+            <h2>Quiz Animali Domestici</h2>
+          </div>
+          <div class="card-body">
+            <div *ngIf="domande && domande.length > 0 && domande[domandaCorrente]">
+              <h4 class="card-title">{{ domande[domandaCorrente]?.testo }}</h4>
+              <div *ngFor="let risposta of domande[domandaCorrente]?.risposte">
+                <button
+                  class="btn btn-primary mb-2"
+                  (click)="selezionaRisposta(risposta.valore)"
+                >{{ risposta.testo }}</button>
+              </div>
+            </div>
+  
+            <div *ngIf="!quizCompleto">
+              <button
+                class="btn btn-success"
+                *ngIf="domandaCorrente < domande.length - 1"
+                (click)="prossimaDomanda()"
+              >Prossima domanda</button>
+            </div>
+  
+            <div *ngIf="domandaCorrente === domande.length - 1 && !quizCompleto">
+                <button class="btn btn-info" (click)="onSubmit()">Visualizza risultato</button>
+            </div>
+  
+            <div *ngIf="quizCompleto">
+              <h3 class="card-title">Ecco la razza che fa per te: {{ risultato }}</h3>
+          
+              <button class="btn btn-secondary" (click)="ricominciaQuiz()">Ricomincia il quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

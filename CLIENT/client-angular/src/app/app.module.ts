@@ -8,6 +8,8 @@ import { ContattiComponent } from './contatti/contatti.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CaneComponent } from './cani/cani.component';
 import { GattiComponent } from './gatti/gatti.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { RisultatoComponent } from './quiz/risultato/risultato.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { GattiComponent } from './gatti/gatti.component';
     HomeComponent,
     ContattiComponent,
     CaneComponent,
-    GattiComponent
+    GattiComponent,
+    QuizComponent,
+    RisultatoComponent
   ],
   imports: [
     BrowserModule,

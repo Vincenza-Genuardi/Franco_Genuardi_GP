@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   
-  AnimaliUrl = 'https://3000-vincenzagen-francogenua-ki4sxy02odb.ws-eu111.gitpod.io/api'; //URL for fetching data
+  AnimaliUrl = 'https://3000-vincenzagen-francogenua-d3rtf0giim4.ws-eu111.gitpod.io/api'; //URL for fetching data
   cani : Animale[];
   gatti : Animale[];
 
