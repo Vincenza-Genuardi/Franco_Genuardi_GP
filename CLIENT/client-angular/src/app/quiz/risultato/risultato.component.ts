@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Razza } from '../quiz.component'; 
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-risultato',
@@ -7,11 +7,12 @@ import { Razza } from '../quiz.component';
   styleUrls: ['./risultato.component.css']
 })
 export class RisultatoComponent implements OnInit {
-  @Input() risultato: Razza | null = null; 
+  risultato: string | null = null;
 
-  constructor() {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-   
+    const queryParams = this.activatedRoute.snapshot.queryParams as { risultato: string }; // Type assertion
+    this.risultato = queryParams.risultato;
   }
 }

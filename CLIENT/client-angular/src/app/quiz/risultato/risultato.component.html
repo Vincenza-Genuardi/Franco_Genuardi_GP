@@ -1,5 +1,14 @@
-<div *ngIf="risultato">
-    <h2>Risultato del quiz: {{ risultato.nome }}</h2>
-    <img src="{{ risultato.immagine }}" alt="{{ risultato.nome }} image">
-    <p>{{ risultato.descrizione }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header">
+          <h2>Risultato del Quiz</h2>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">La razza del tuo animale domestico ideale è: {{ risultato }}</h3>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
